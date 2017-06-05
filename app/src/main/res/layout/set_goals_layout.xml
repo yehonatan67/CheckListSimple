@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/goal_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="47dp"
+        android:text="Goal Name" />
+
+    <EditText
+        android:id="@+id/user_goal_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/goal_name"
+        android:layout_alignBottom="@+id/goal_name"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/goal_name"
+        android:layout_below="@+id/user_goal_name"
+        android:layout_marginTop="93dp"
+        android:text="Save"
+        android:onClick="saveInfo"/>
+
+    <Button
+        android:id="@+id/display_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/user_goal_name"
+        android:layout_alignTop="@+id/add_button"
+        android:text="Display"
+        android:onClick="displayInfo"/>
+
+    <TextView
+        android:id="@+id/my_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_button"
+        android:layout_marginTop="93dp"
+        android:layout_toEndOf="@+id/add_button"
+        android:text="TextView" />
+
+    <EditText
+        android:id="@+id/user_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/user_goal_name"
+        android:layout_below="@+id/user_goal_name"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:inputType = "number"/>
+
+    <TextView
+        android:id="@+id/goal_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/goal_name"
+        android:layout_alignTop="@+id/user_hours"
+        android:text="Hours" />
+
+</RelativeLayout>
